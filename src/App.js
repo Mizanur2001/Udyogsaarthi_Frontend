@@ -1,8 +1,20 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Jobs from "./Components/Jobs";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Courses from "./Components/Courses";
 
 function App() {
-  return <h1 className="text-sky-600">hello</h1>;
+  return (
+    <div>
+      <Header />
+      <Jobs />
+      {/* <Courses /> */}
+
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

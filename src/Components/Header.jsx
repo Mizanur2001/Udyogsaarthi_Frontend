@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { NavLink } from "react-router-dom";
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -48,24 +49,36 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm font-normal leading-6 text-gray-900">
+          <NavLink
+            to={"/"}
+            className="text-sm font-normal leading-6 text-gray-900"
+          >
             Home
-          </a>
-          <a href="#" className="text-sm font-normal leading-6 text-gray-900">
+          </NavLink>
+          <NavLink
+            to="/jobs"
+            className="text-sm font-normal leading-6 text-gray-900"
+          >
             Find Job
-          </a>
-          <a href="#" className="text-sm font-normal leading-6 text-gray-900">
+          </NavLink>
+          <NavLink
+            to="/courses"
+            className="text-sm font-normal leading-6 text-gray-900"
+          >
             Find Employers
-          </a>
-          <a href="#" className="text-sm font-normal leading-6 text-gray-900">
+          </NavLink>
+          <NavLink className="text-sm font-normal leading-6 text-gray-900">
             Dashboard
-          </a>
-          <a href="#" className="text-sm font-normal leading-6 text-gray-900">
+          </NavLink>
+          <NavLink className="text-sm font-normal leading-6 text-gray-900">
             Job Alerts
-          </a>
-          <a href="#" className="text-sm font-normal leading-6 text-gray-900">
+          </NavLink>
+          <NavLink
+            to={"/support"}
+            className="text-sm font-normal leading-6 text-gray-900"
+          >
             Customer Supports
-          </a>
+          </NavLink>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
@@ -119,9 +132,9 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <NavLink className="-m-1.5 p-1.5">
               <img className="h-8" src={logo} alt="" />
-            </a>
+            </NavLink>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -134,42 +147,36 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="#"
+                <NavLink
+                  to={"/"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="/jobs"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Find Job
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="/courses"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Find Employers
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                </NavLink>
+                <NavLink className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50">
                   Dashboard
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                </NavLink>
+                <NavLink className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50">
                   Job Alerts
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="/support"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Customer Supports
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>

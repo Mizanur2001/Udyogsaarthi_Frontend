@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../imgs/logo.png";
+import { NavLink } from "react-router-dom";
 
 const Jobs = () => {
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -93,8 +94,11 @@ const Jobs = () => {
 
       <div className="flex flex-row flex-wrap items-center justify-center">
         {arr.map((item) => (
-          <div className="p-2 lg:w-full sm:max-w-md lg:flex-shrink-0">
-            <div className="rounded-lg bg-gray-50 p-4 ring-1 ring-inset ring-gray-900/5 ">
+          <NavLink
+            to={`/jobs/job_id`}
+            className="p-2 m-2 lg:w-full sm:max-w-md lg:flex-shrink-0"
+          >
+            <div className="rounded-lg bg-gradient-to-r from-[#FFF6E6] to-[#FFFFFF] p-4 ring-1 ring-inset ring-gray-900/5 ">
               <h4 className="">Job title</h4>
               <div className="flex items-center justify-between gap-1 my-2">
                 <p className="text-green-600 text-sm">Type: Part Time</p>
@@ -131,7 +135,7 @@ const Jobs = () => {
                 </svg>
               </div>
             </div>
-          </div>
+          </NavLink>
         ))}
       </div>
     </>
